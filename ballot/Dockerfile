@@ -1,7 +1,7 @@
 FROM golang:alpine as builder
 LABEL maintainer="mgdevstack" \
     vendor="Zettabytes" \
-    owner="zbio"
+    owner="zb-test1960123"
 ADD main.go  .
 RUN GO111MODULE=off CGO_ENABLED=0 GOOS=linux go build -o app
 

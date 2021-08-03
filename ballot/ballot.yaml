@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   labels: 
     apps: ballot
-  name: ballot
+  name: ballot123
 spec: 
   type: NodePort
   selector: 
