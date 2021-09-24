@@ -12,3 +12,8 @@ LABEL maintainer="mgdevstack" \
 COPY --from=builder /go/app /app
 USER nobody
 ENTRYPOINT ["/app"]
+
+#changing
+
+#changed
+
