@@ -6,16 +6,16 @@
 // https://on.cypress.io/writing-first-test
 describe('My First Test', () => {
   it('Visits voter webpage', () => {
-    cy.visit('http://10.10.0.10:30030')
+    cy.visit('http://roost-controlplane:30030')
 
   cy.intercept(
   {
     method: 'POST', // Route all POST requests
-    url: '*30080*', // that have a URL that matches '/users/*'
+    url: '*ballot*', // that have a URL that matches '/users/*'
   }
 ).as('postresult')
 
-cy.contains("docker").click()
+cy.contains("Docker").click()
 
 cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
 
@@ -23,35 +23,28 @@ cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
 })
 
 cy.reload()
-cy.contains("minikube").click()
+cy.contains("MiniKube").click()
 
 cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
   assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
 })
 cy.reload()
-cy.contains("roost").click()
+cy.contains("Roost").click()
 
 cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
   assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
 })
 cy.reload()
-cy.contains("kind").click()
-
-cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
-  assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
-})
-cy.reload()
-cy.contains("k3d").click()
+cy.contains("K3D").click()
 
 cy.wait('@postresult',{ responseTimeout: 35000 }).then((interception) => {
   assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
 })
 
-cy.visit('http://10.10.0.10:30030/result')
-cy.contains('docker')
-cy.contains('docker')
-cy.contains('minikube')
-cy.contains('k3d')
-cy.contains('kind')
+cy.visit('http://roost-controlplane:30030/voter/result')
+cy.contains('Roost')
+cy.contains('Docker')
+cy.contains('MiniKube')
+cy.contains('K3D')
   })
 })
