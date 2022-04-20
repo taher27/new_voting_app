@@ -5,18 +5,5 @@
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^9.2.2"
-  },
-
-  "name": "cypress-example-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "voter.spec.js",
-  "scripts": {
-    "test": "cypress run voter.spec.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "cypress": "^8.5.0"
   }
 }
