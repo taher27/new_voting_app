@@ -36,7 +36,7 @@ describe('Checking Voter Webpage ', () => {
         .click()
   
         cy.url()
-        .should('be.equal','http://10.102.246.211:80/voter/result')
+        .should('be.equal','http://default.voter.10.10.0.10.nip.io/voter/result')
 
         cy.contains(candidateName)
         cy.reload()
