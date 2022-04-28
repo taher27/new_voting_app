@@ -3,7 +3,7 @@ const { expect } = require("chai")
 describe('Testing Election Commission Webpage', () => {
 
   it('Testing valid text in web-page',()=> {
-    cy.visit('http://default.ec.10.10.0.10.nip.io/')
+    cy.visit('http://10.108.178.143:80/')
    
     cy.contains('Election Commission Admin Portal')
     cy.contains("Add Candidate")
@@ -15,7 +15,7 @@ describe('Testing Election Commission Webpage', () => {
   })
 
   it('Testing adding the candidate in web-page',()=>{
-    cy.visit('http://default.ec.10.10.0.10.nip.io/')
+    cy.visit('http://10.108.178.143:80/')
 
     cy.intercept(
       {
@@ -48,7 +48,7 @@ describe('Testing Election Commission Webpage', () => {
 
   it('Testing deleting the candidate in web-page',()=>{
 
-    cy.visit('http://default.ec.10.10.0.10.nip.io/')
+    cy.visit('http://10.108.178.143:80/')
     cy.intercept(
       {
         method: 'DELETE',
