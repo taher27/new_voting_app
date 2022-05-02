@@ -3,7 +3,7 @@ const { expect } = require("chai")
 describe('Testing Election Commission Webpage', () => {
 
   it('Testing valid text in web-page',()=> {
-    cy.visit('http://10.108.178.143:80/')
+    cy.visit(Cypress.env('ROOST_SVC_URL'))
    
     cy.contains('Election Commission Admin Portal')
     cy.contains("Add Candidate")
@@ -15,7 +15,7 @@ describe('Testing Election Commission Webpage', () => {
   })
 
   it('Testing adding the candidate in web-page',()=>{
-    cy.visit('http://10.108.178.143:80/')
+    cy.visit(Cypress.env('ROOST_SVC_URL'))
 
     cy.intercept(
       {

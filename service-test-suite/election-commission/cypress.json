@@ -2,5 +2,9 @@
   "reporter": "junit",
   "reporterOptions": {
      "mochaFile": "results/my-test-output-[hash].xml"
+  },
+  "env": {
+    "ROOST_SVC_URL" : "http://default.ec.10.10.0.10.nip.io",
+    "ROOST_SVC_HOST" : "default.ec.10.10.0.10.nip.io"
   }
 }
