@@ -2,5 +2,7 @@
   "reporter": "junit",
   "reporterOptions": {
      "mochaFile": "results/my-test-output-[hash].xml"
-  }
+  },
+  "videoCompression": false
+  
 }
