@@ -28,7 +28,7 @@ describe('Checking Voter Webpage ', () => {
         cy.get('.selectedCard')
         .should('be.visible')
 
-        cy.wait('@postresult',{ responseTimeout: 100 }).then((interception) => {
+        cy.wait('@postresult',{ responseTimeout: 1000 }).then((interception) => {
           assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
         })
 
