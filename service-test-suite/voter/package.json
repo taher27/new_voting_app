@@ -9,9 +9,16 @@
     "mocha": "^9.2.2",
     "get-firefox":"5.0.0"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
