@@ -16,21 +16,21 @@ describe('Checking Voter Webpage ', () => {
 
         cy.visit(Cypress.env('ROOST_SVC_URL')) 
 
-        // cy.intercept(
-        // {
-        //   method: 'POST', 
-        //   url: '*ballot*', 
-        // }
-        // ).as('postresult')
+        cy.intercept(
+        {
+          method: 'POST', 
+          url: '*ballot*', 
+        }
+        ).as('postresult')
 
-        // cy.contains(candidateName).click()
+        cy.contains(candidateName).click()
         
-        // cy.get('.selectedCard')
-        // .should('be.visible')
+        cy.get('.selectedCard')
+        .should('be.visible')
 
-        // cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
-        //   assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
-        // })
+        cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
+          assert.isNotNull(interception.response.body, '{code: 201, message: "Vote saved sucessfully"}')
+        })
 
         cy.contains('Show Results')
         .click()
