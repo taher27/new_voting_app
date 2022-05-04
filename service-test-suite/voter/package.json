@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cypress": "^9.6.0",
+    "cypress": "^5.6.0",
     "browserslist": "4.20.3",
     "get-firefox":"5.0.0"
   },
