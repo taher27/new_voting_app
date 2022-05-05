@@ -17,12 +17,12 @@ describe('Testing Election Commission Webpage', () => {
   it('Testing adding the candidate in web-page',()=>{
     cy.visit(Cypress.env('ROOST_SVC_URL'))
 
-    // cy.intercept(
-    //   {
-    //     method: 'POST', 
-    //     url: '*ecserver*', 
-    //   }
-    // ).as('postresult')  
+    cy.intercept(
+      {
+        method: 'POST', 
+        url: '*ecserver*', 
+      }
+    ).as('postresult')  
 
     cy.contains("Add Candidate").click()
     cy.get("#candidateNameInput").type("RoostK8s")
