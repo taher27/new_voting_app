@@ -29,37 +29,37 @@ describe('Testing Election Commission Webpage', () => {
     cy.get("#candidateImageUrlInput").type("https://content.roost.io/content/images/2021/05/Roost-3D-Metallic---Horizontal---Light-Silver.png")
     cy.contains("Submit").should('be.visible').click()
 
-    // cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
+    cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
 
-    //   assert.isNotNull(interception.response.body, '{code: 201 }')
-    // })
+      assert.isNotNull(interception.response.body, '{code: 201 }')
+    })
 
     cy.contains("Add Candidate").click()
     cy.get("#candidateNameInput").type("Helm")
     cy.get("#candidateImageUrlInput").type("https://helm.sh/img/helm.svg")
     cy.contains("Submit").should('be.visible').click()
 
-    // cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
+    cy.wait('@postresult',{ responseTimeout: 5000 }).then((interception) => {
 
-    //   assert.isNotNull(interception.response.body, '{code: 201 }')
-    // })
+      assert.isNotNull(interception.response.body, '{code: 201 }')
+    })
 
   })
 
   it('Testing deleting the candidate in web-page',()=>{
 
     cy.visit(Cypress.env('ROOST_SVC_URL'))
-    // cy.intercept(
-    //   {
-    //     method: 'DELETE',
-    //     url: '*ecserver*', 
-    //   }
-    // ).as('deleteresult')   
+    cy.intercept(
+      {
+        method: 'DELETE',
+        url: '*ecserver*', 
+      }
+    ).as('deleteresult')   
     cy.contains("Delete").click()
-    // cy.wait('@deleteresult',{ responseTimeout: 5000 }).then((interception) => {
+    cy.wait('@deleteresult',{ responseTimeout: 5000 }).then((interception) => {
 
-    //   assert.isNotNull(interception.response.body, '{code: 201}')
-    // })
+      assert.isNotNull(interception.response.body, '{code: 201}')
+    })
   })
 
 })
