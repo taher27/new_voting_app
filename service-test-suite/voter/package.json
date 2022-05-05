@@ -2,12 +2,18 @@
   "dependencies": {
     "cypress": "^5.6.0",
     "browserslist": "4.20.3",
-    "get-firefox":"5.0.0"
+    "get-firefox":"5.0.0",
+    "@cypress/code-coverage": "^3.8.2",
+    "@cypress/react": "^5.3.4",
+    "@cypress/webpack-dev-server": "^1.1.2"
   },
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^9.2.2",
-    "get-firefox":"5.0.0"
+    "get-firefox":"5.0.0",
+    "@cypress/code-coverage": "^3.8.2",
+    "@cypress/react": "^5.3.4",
+    "@cypress/webpack-dev-server": "^1.1.2"
   },
   "browserslist": {
     "production": [
