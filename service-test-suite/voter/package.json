@@ -4,16 +4,16 @@
     "browserslist": "4.20.3",
     "get-firefox":"5.0.0",
     "@cypress/code-coverage": "^3.8.2",
-    "@cypress/react": "^5.12.4",
-    "@cypress/webpack-dev-server": "^1.1.2"
+    "react": "^18.1.0",
+    "webpack-dev-server": "^4.9.0"
   },
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^9.2.2",
     "get-firefox":"5.0.0",
     "@cypress/code-coverage": "^3.8.2",
-    "@cypress/react": "^5.3.4",
-    "@cypress/webpack-dev-server": "^1.1.2"
+    "react": "^18.1.0",
+    "webpack-dev-server": "^4.9.0"
   },
   "browserslist": {
     "production": [
