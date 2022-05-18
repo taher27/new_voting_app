@@ -1,6 +1,6 @@
 {
     "dependencies": {
-      "cypress": "^9.5.4"
+      "cypress": "^7.7.0"
     },
     "devDependencies": {
       "chai": "^4.3.6",
